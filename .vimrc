@@ -1,3 +1,4 @@
+set nocompatible
 set nu
 syntax on
 set showmatch
@@ -7,6 +8,10 @@ set shiftwidth=4
 set autoindent
 set cindent
 filetype on
+
+"colorscheme solarized
+"colorscheme solarized
+"set background=dark
 
 "run pathogen
 execute pathogen#infect()
