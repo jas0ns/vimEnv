@@ -19,4 +19,4 @@ Attention
 
   If you failed to execute `:GoInstallBinarie` caused by the motherf**k wall, you'll need to get the gotools packages via [gopm.io](http://gopm.io/download)
 
-    See more details in [fatih/vim-go](https://github.com/fatih/vim-go).
+  See more details in [fatih/vim-go](https://github.com/fatih/vim-go).
