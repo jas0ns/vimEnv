@@ -44,3 +44,20 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 "fold mapping
 au FileType go nmap <F5> $zf%
 au FileType go nmap <F6> zd
+
+"C\C++ complie shortcut
+au FileType c nmap <Leader>b :call CMake()<CR>
+au FileType c nmap <leader>r :call CRun()<CR>
+au FileType cpp nmap <Leader>b :call CMake()<CR>
+au FileType cpp nmap <Leader>r :call CRun()<CR>
+function CMake()
+	exec "w"
+	exec "make"
+"	exec "copen"
+endfunction
+
+function CRun()
+	:call CMake()
+	let	runnable=split("%", ".", 1)
+	:echo "!./"."
+endfunction
