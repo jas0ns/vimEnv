@@ -40,3 +40,7 @@ au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>d <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
+
+"fold mapping
+au FileType go nmap <F5> $zf%
+au FileType go nmap <F6> zd
