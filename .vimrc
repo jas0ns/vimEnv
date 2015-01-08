@@ -10,6 +10,10 @@ set cindent
 set cursorline
 filetype on
 
+set fileencodings=utf-8
+set termencoding=utf-8
+set encoding=utf-8
+
 "colorscheme
 "colorscheme solarized
 "set background=dark
@@ -48,8 +52,10 @@ au FileType go nmap <F6> zd
 "C\C++ complie shortcut
 au FileType c nmap <Leader>b :call CMake()<CR>
 au FileType c nmap <leader>r :call CRun()<CR>
+au FileType c nmap <leader>c :call CClean()<CR>
 au FileType cpp nmap <Leader>b :call CMake()<CR>
 au FileType cpp nmap <Leader>r :call CRun()<CR>
+au FileType cpp nmap <Leader>c :call CClean()<CR>
 function CMake()
 	exec "w"
 	exec "make"
@@ -58,6 +64,13 @@ endfunction
 
 function CRun()
 	:call CMake()
-	let	runnable=split("%", ".", 1)
-	:echo "!./"."
+	:exec ":!./%:r" 
 endfunction
+
+function CClean()
+	:exec "make clean"
+endfunction
+
+"YCM config
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+
