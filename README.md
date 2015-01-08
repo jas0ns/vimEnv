@@ -32,7 +32,8 @@ cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
 ```
   You can also add `--system-libclang` to the install script in case you already have libclang version 3.5 or higher installed.
-  But [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe) STRONGLY recommended AGAINST use of the system libclang instead of the upstream compiled binaries. 
+  But [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe) STRONGLY recommended AGAINST use of the system libclang instead of the upstream compiled binaries. <br>
+  
   See more details and the usage of YCM at [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe).
 
 Attention
