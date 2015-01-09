@@ -1,6 +1,7 @@
+syntax on
+filetype on
 set nocompatible
 set nu
-syntax on
 set showmatch
 set tabstop=4
 set softtabstop=4
@@ -8,7 +9,6 @@ set shiftwidth=4
 set autoindent
 set cindent
 set cursorline
-filetype on
 
 set fileencodings=utf-8
 set termencoding=utf-8
@@ -83,9 +83,10 @@ function CClean()
 endfunction
 
 "YCM config
+nmap <leader>df :YcmCompleter GoTo<CR>
+let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
-nmap <leader>df :YcmCompleter GoTo<CR>
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_complete_in_comments = 1
 let g:ycm_filetype_blacklist = {
