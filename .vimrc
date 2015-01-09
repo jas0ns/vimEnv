@@ -14,6 +14,8 @@ set fileencodings=utf-8
 set termencoding=utf-8
 set encoding=utf-8
 
+set completeopt-=preview
+
 "colorscheme
 "colorscheme solarized
 "set background=dark
@@ -25,6 +27,10 @@ filetype plugin indent on
 "NERDTree mapping
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
+
+"CtrlP
+
+
 
 "set mapleader
 let mapleader = ","
@@ -40,14 +46,16 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>d <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
 "fold mapping
 au FileType go nmap <F5> $zf%
 au FileType go nmap <F6> zd
+au FileType c nmap <F5> zf
+au FileType c nmap <F6> zd
+au FileType cpp nmap <F5> zf
+au FileType cpp nmap <F6> zd
 
 "C\C++ complie shortcut
 au FileType c nmap <Leader>b :call CMake()<CR>
@@ -72,5 +80,20 @@ function CClean()
 endfunction
 
 "YCM config
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+nmap <leader>df :YcmCompleter GoTo<CR>
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-
+let g:ycm_complete_in_comments = 1
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1,
+      \ 'infolog' : 1,
+      \ 'mail' : 1,
+      \}

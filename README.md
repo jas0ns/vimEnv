@@ -1,7 +1,7 @@
 vimEnv
 ======
 
-Jason's .vimrc and vim plugins managed by pathogen located in .vim/
+Jason's `.vimrc` and vim plugins include NERDTree, YCM, vim-go, and CtrlP managed by pathogen located in `.vim/`.
 
 Installation
 ------
