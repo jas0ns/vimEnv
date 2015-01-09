@@ -16,6 +16,12 @@ set encoding=utf-8
 
 set completeopt-=preview
 
+"set mapleader
+let mapleader = ","
+
+"open .vimrc shortcut
+map <leader>v :e ~/.vimrc<CR>
+
 "colorscheme
 "colorscheme solarized
 "set background=dark
@@ -29,11 +35,8 @@ map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
 "CtrlP
+let g:ctrlp_working_path_mode = 'c'
 
-
-
-"set mapleader
-let mapleader = ","
 
 "vim-go custom mapping
 au FileType go nmap <Leader>p :GoImports<CR>
