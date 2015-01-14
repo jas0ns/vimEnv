@@ -36,7 +36,10 @@ map <F3> :NERDTreeToggle<CR>
 
 "CtrlP
 let g:ctrlp_working_path_mode = 'c'
-
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
 
 "vim-go custom mapping
 au FileType go nmap <Leader>p :GoImports<CR>
