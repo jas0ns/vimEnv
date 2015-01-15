@@ -23,8 +23,9 @@ let mapleader = ","
 map <leader>v :e ~/.vimrc<CR>
 
 "colorscheme
-"colorscheme solarized
-"set background=dark
+"let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 "run pathogen
 execute pathogen#infect()
@@ -104,3 +105,9 @@ let g:ycm_filetype_blacklist = {
       \ 'infolog' : 1,
       \ 'mail' : 1,
       \}
+
+"PowerLine
+set laststatus=2   " Always show the statusline
+let g:Powerline_symbols = 'fancy'
+let Powerline_symbols = 'compatible'
+
