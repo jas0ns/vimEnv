@@ -1,3 +1,4 @@
+syntax enable
 syntax on
 filetype on
 set nocompatible
@@ -13,23 +14,24 @@ set cursorline
 set fileencodings=utf-8
 set termencoding=utf-8
 set encoding=utf-8
-
 set completeopt-=preview
-
-"set mapleader
-let mapleader = ","
-
-"open .vimrc shortcut
-map <leader>v :e ~/.vimrc<CR>
-
-"colorscheme
-"let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
 
 "run pathogen
 execute pathogen#infect()
 filetype plugin indent on
+
+"set mapleader
+let mapleader = ","
+
+".vimrc open shortcut
+map <leader>v :e ~/.vimrc<CR>
+
+"colorscheme
+
+let g:solarized_termcolors=256
+set t_Co=256
+set background=dark
+colorscheme solarized
 
 "NERDTree mapping
 map <F3> :NERDTreeMirror<CR>
@@ -109,5 +111,3 @@ let g:ycm_filetype_blacklist = {
 "PowerLine
 set laststatus=2   " Always show the statusline
 let g:Powerline_symbols = 'fancy'
-let Powerline_symbols = 'compatible'
-
