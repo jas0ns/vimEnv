@@ -49,11 +49,11 @@ Attention
 Troubleshooting
 ----------------
 ###powerline
-    If you want to enjoy the `fancy` mode like the following screeshot, you need to use an 88/256-color terminal and the font of your terminal emulator need be patched. See details at [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline).
+  If you want to enjoy the `fancy` mode like the following screeshot, you need to use an 88/256-color terminal and the font of your terminal emulator need be patched. See details at [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline).
     
 ###colorscheme solarized
-    TODO
+  TODO
 
 Screenshots
 -----------
-TODO
+  TODO
