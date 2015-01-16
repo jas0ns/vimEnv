@@ -56,4 +56,12 @@ Troubleshooting
 
 Screenshots
 -----------
-  TODO
+  * YCM:
+  ![](http://jas0ns.github.io/images/vimscreenshot1.jpg)
+  * Powerline:
+  ![](http://jas0ns.github.io/images/vimscreenshot2.png)
+  ![](http://jas0ns.github.io/images/vimscreenshot3.png)
+  * Ctrlp:
+  ![](http://jas0ns.github.io/images/vimscreenshot4.jpg)
+  * Nerdtree:
+  ![](http://jas0ns.github.io/images/vimscreenshot5.png)
