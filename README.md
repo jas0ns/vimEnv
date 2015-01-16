@@ -1,7 +1,7 @@
 vimEnv
 ======
 
-Jason's `.vimrc` and vim plugins include NERDTree, YCM, vim-go, and CtrlP managed by pathogen located in `.vim/`.
+vimEnv is Jason's `.vimrc` and vim plugins include NERDTree, YCM, vim-go, and CtrlP managed by pathogen located in `.vim/` and used [solarized](http://ethanschoonover.com/solarized) colorscheme. Just take a look at the [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots).
 
 Installation
 ------
