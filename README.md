@@ -19,13 +19,8 @@ Installation
     sudo apt-get install build-essential cmake
     sudo apt-get install python-dev
     ```
-3.  Get the YCM sources.
-    ```Bash
-    cd ~/.vim/bundle/YouCompleteMe
-    git submodule update --init --recursive 
-    ```
 
-4.  Compiling YCM.
+3.  Compiling YCM.
 
     ```Bash
     cd ~/.vim/bundle/YouCompleteMe
