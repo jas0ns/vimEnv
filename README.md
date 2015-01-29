@@ -9,7 +9,7 @@ Installation
 
     ```Bash
     cd ~
-    git clone https://github.com/toyCoder/vimEnv.git
+    git clone https://github.com/jas0ns/vimEnv.git
     git submodule update --init --recursive 
     ```
 
