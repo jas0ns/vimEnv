@@ -59,6 +59,11 @@ Troubleshooting
      export TERM=xterm-256color
      fi
      ```
+  *  change the value of `let s:base03` and `let s:base02` of `solarized.vim` at the line 303 and 304 of `~/.vim/bundle/vim-colors-solarized` to `"NONE"` like this.
+    ```bash
+    let s:base03      = "NONE"
+    let s:base02      = "NONE"
+    ```
   *  execute `source /etc/profile` and try again.
  
 Screenshots
