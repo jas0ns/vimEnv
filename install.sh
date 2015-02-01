@@ -1,4 +1,6 @@
 #!/bin/sh -e                                                                                                                                   
+rm -rf .vim .gitignore .vimrc .gitmodules README.md .git install.sh
+
 mv -f .vim ~
 mv -f .gitignore ~
 mv -f .vimrc ~
