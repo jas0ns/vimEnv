@@ -10,7 +10,9 @@ Installation
     ```Bash
     cd ~
     git clone https://github.com/jas0ns/vimEnv.git
-    git submodule update --init --recursive 
+    cd vimEnv
+    chmod o+x install.sh
+    ./install.sh
     ```
 
 2.  If you want to use YCM and it's semantic support for C-family languages, make sure that you have development tools, CMake     and  Python headers installed. Otherwise, you can install them on Ubuntu by the following commands.
