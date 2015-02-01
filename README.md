@@ -26,6 +26,7 @@ Installation
 
     ```Bash
     cd ~/.vim/bundle/YouCompleteMe
+    git submodule update --init --recursive 
     ./install.sh --clang-completer
     ```
   You can also add `--system-libclang` to the install script in case you already have libclang version 3.5 or higher installed.
@@ -49,8 +50,17 @@ Troubleshooting
   If you want to enjoy the `fancy` mode like the following [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots), you need to use an 88/256-color terminal and the font of your terminal emulator need be patched. I use consolas for powerline provided by [eugeneching/consolas-powerline-vim](https://github.com/eugeneching/consolas-powerline-vim). If you like this font, copy the font files into your font library, and make your terminal emulator support this patched font.  See details at [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline).
     
 ###colorscheme solarized
-  TODO
-
+  If the color of your vim is not darkblue like the screenshots and your terminal emulator is type of xterm, follow the below steps.
+  *  execute the command `tput colors`. If you saw `8` or something not `256`, then next.
+  *  add the following code to `/etc/profile` or `~/.bashrc`.
+  
+     ```bash
+     if [ "$TERM" == "xterm" ]; then
+     export TERM=xterm-256color
+     fi
+     ```
+  *  execute `source /etc/profile` and try again.
+ 
 Screenshots
 -----------
   * YCM:
