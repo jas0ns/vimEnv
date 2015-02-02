@@ -11,7 +11,7 @@ Installation
     cd ~
     git clone https://github.com/jas0ns/vimEnv.git
     cd vimEnv
-    chmod o+x install.sh
+    chmod u+x install.sh
     ./install.sh
     ```
 
