@@ -23,11 +23,14 @@ filetype plugin indent on
 "set mapleader
 let mapleader = ","
 
+"add map xxd to check binary
+map <leader>x :%!xxd<CR>
+map <leader>X :%!xxd -r<CR>
+
 ".vimrc open shortcut
 map <leader>v :e ~/.vimrc<CR>
 
 "colorscheme
-
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
@@ -61,9 +64,9 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 "fold mapping
 au FileType go nmap <F5> $zf%
 au FileType go nmap <F6> zd
-au FileType c nmap <F5> zf
+au FileType c nmap <F5> zf%
 au FileType c nmap <F6> zd
-au FileType cpp nmap <F5> zf
+au FileType cpp nmap <F5> zf%
 au FileType cpp nmap <F6> zd
 
 "C\C++ complie shortcut
@@ -90,7 +93,11 @@ endfunction
 
 "YCM config
 nmap <leader>df :YcmCompleter GoTo<CR>
+let g:syntastic_quite_messages = {"level": "warnings", "type": "style"}
 let g:ycm_collect_identifiers_from_tags_files = 1
+"disable syntastic
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_auto_trigger = 1
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
