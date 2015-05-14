@@ -1,7 +1,7 @@
 vimEnv
 ======
 
-vimEnv is Jason's `.vimrc` and vim plugins including NERDTree, YCM, vim-go, and CtrlP managed by pathogen located in `.vim/` and used [solarized](http://ethanschoonover.com/solarized) colorscheme. Just take a look at the [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots).
+vimEnv is Jason's `.vimrc` and vim plugins including NERDTree, YCM, Taglist, vim-go, and CtrlP managed by pathogen located in `.vim/` and used [solarized](http://ethanschoonover.com/solarized) colorscheme. Just take a look at the [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots).
 
 Installation
 ------
@@ -36,6 +36,8 @@ Installation
 
 Attention
 ------
+###Taglist
+  Make sure you have [exuberant ctags](http://ctags.sourceforge.net/) installed on your system.
 ###vim-go
   If you want to use plugin vim-go, please be sure all the necessary binaries are installed (such as `gocode`, `godef`, 
 `goimports`, etc..). You can easily install them with the included `GoInstallBinarie`. <br>
