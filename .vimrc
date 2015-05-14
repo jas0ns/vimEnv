@@ -48,6 +48,14 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
   \ }
 
+"Taglist config
+let TList_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Right_Window=1
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_WinWidth=40
+nmap <F4> :TlistToggle<CR>
+
 "vim-go custom mapping
 au FileType go nmap <Leader>p :GoImports<CR>
 au FileType go nmap <Leader>f :GoFmt<CR>
@@ -91,6 +99,7 @@ endfunction
 function CClean()
 	:exec "make clean"
 endfunction
+
 
 "YCM config
 nmap <leader>df :YcmCompleter GoTo<CR>
