@@ -1,7 +1,7 @@
 vimEnv
 ======
 
-vimEnv is Jason's `.vimrc` and vim plugins include NERDTree, YCM, vim-go, and CtrlP managed by pathogen located in `.vim/` and used [solarized](http://ethanschoonover.com/solarized) colorscheme. Just take a look at the [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots).
+vimEnv is Jason's `.vimrc` and vim plugins including NERDTree, YCM, vim-go, and CtrlP managed by pathogen located in `.vim/` and used [solarized](http://ethanschoonover.com/solarized) colorscheme. Just take a look at the [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots).
 
 Installation
 ------
@@ -9,8 +9,10 @@ Installation
 
     ```Bash
     cd ~
-    git clone https://github.com/toyCoder/vimEnv.git
-    git submodule update --init --recursive 
+    git clone https://github.com/jas0ns/vimEnv.git
+    cd vimEnv
+    chmod u+x install.sh
+    ./install.sh
     ```
 
 2.  If you want to use YCM and it's semantic support for C-family languages, make sure that you have development tools, CMake     and  Python headers installed. Otherwise, you can install them on Ubuntu by the following commands.
@@ -24,6 +26,7 @@ Installation
 
     ```Bash
     cd ~/.vim/bundle/YouCompleteMe
+    git submodule update --init --recursive 
     ./install.sh --clang-completer
     ```
   You can also add `--system-libclang` to the install script in case you already have libclang version 3.5 or higher installed.
@@ -44,11 +47,28 @@ Attention
 Troubleshooting
 ----------------
 ###powerline
-  If you want to enjoy the `fancy` mode like the following [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots), you need to use an 88/256-color terminal and the font of your terminal emulator need be patched. I use consolas for powerline provided by [eugeneching/consolas-powerline-vim](https://github.com/eugeneching/consolas-powerline-vim). If you like this font, copy the font files into your font library, and make your terminal emulator support this patched font.  See details at [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline).
+  If you want to enjoy the `fancy` mode like the following [screenshots](https://github.com/jas0ns/vimEnv/blob/master/README.md#screenshots), you need to use an 88/256-color terminal with utf-8 charset and the font of your terminal emulator need be patched by the fontpatcher at `.vim/bundle/vim-powerline/fontpatcher`.<br>
+  
+  I use consolas for powerline provided by [eugeneching/consolas-powerline-vim](https://github.com/eugeneching/consolas-powerline-vim). If you like this font, copy the font files into your font library, and make your terminal emulator support this patched font.  See details at [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline).
     
 ###colorscheme solarized
-  TODO
-
+  If the color of your vim is not darkblue like the screenshots and your terminal emulator is type of xterm, follow the below steps.
+  *  execute the command `tput colors`. If you saw `8` or something not `256`, then next.
+  *  add the following code to `/etc/profile` or `~/.bashrc`.
+  
+     ```bash
+     if [ "$TERM" == "xterm" ]; then
+     export TERM=xterm-256color
+     fi
+     ```
+  *  change the value of `let s:base03` and `let s:base02` of `solarized.vim` at the line 303 and 304 of `~/.vim/bundle/vim-colors-solarized` to `"NONE"` like this.
+    
+    ```bash
+    let s:base03      = "NONE"
+    let s:base02      = "NONE"
+    ```
+  *  execute `source /etc/profile` and try again.
+ 
 Screenshots
 -----------
   * YCM:
