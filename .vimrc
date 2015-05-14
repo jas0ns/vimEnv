@@ -41,7 +41,8 @@ map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
 "CtrlP
-let g:ctrlp_working_path_mode = 'c'
+"default mode
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
