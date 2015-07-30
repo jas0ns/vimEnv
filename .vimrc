@@ -4,12 +4,16 @@ filetype on
 set nocompatible
 set nu
 set showmatch
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set autoindent
-set cindent
 set cursorline
+"indent set
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set cindent
+set autoindent
+
+set nobackup
 
 set fileencodings=utf-8
 set termencoding=utf-8
@@ -42,7 +46,7 @@ map <F3> :NERDTreeToggle<CR>
 
 "CtrlP
 "default mode
-let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
@@ -55,6 +59,7 @@ let Tlist_Use_Right_Window=1
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_WinWidth=40
 nmap <F4> :TlistToggle<CR>
+nmap <C-\> :tnext<CR>
 
 "vim-go custom mapping
 au FileType go nmap <Leader>p :GoImports<CR>
