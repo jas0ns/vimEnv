@@ -52,6 +52,10 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
   \ }
 
+"ctags config
+set tags=tags;
+set autochdir
+
 "Taglist config
 let TList_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
@@ -82,28 +86,6 @@ au FileType c nmap <F5> zf%
 au FileType c nmap <F6> zd
 au FileType cpp nmap <F5> zf%
 au FileType cpp nmap <F6> zd
-
-"C\C++ complie shortcut
-au FileType c nmap <Leader>b :call CMake()<CR>
-au FileType c nmap <leader>r :call CRun()<CR>
-au FileType c nmap <leader>c :call CClean()<CR>
-au FileType cpp nmap <Leader>b :call CMake()<CR>
-au FileType cpp nmap <Leader>r :call CRun()<CR>
-au FileType cpp nmap <Leader>c :call CClean()<CR>
-function CMake()
-	exec "w"
-	exec "make"
-"	exec "copen"
-endfunction
-
-function CRun()
-	:call CMake()
-	:exec ":!./%:r" 
-endfunction
-
-function CClean()
-	:exec "make clean"
-endfunction
 
 
 "YCM config
