@@ -6,8 +6,8 @@ set nu
 set showmatch
 set cursorline
 "indent set
-set expandtab
 set tabstop=2
+set expandtab
 set softtabstop=2
 set shiftwidth=2
 set cindent
@@ -90,27 +90,17 @@ au FileType cpp nmap <F6> zd
 
 "YCM config
 nmap <leader>df :YcmCompleter GoTo<CR>
+let g:ycm_global_ycm_extra_conf='/root/.vim/.ycm_extra_conf.py'
 let g:syntastic_quite_messages = {"level": "warnings", "type": "style"}
 let g:ycm_collect_identifiers_from_tags_files = 1
 "disable syntastic
 let g:ycm_show_diagnostics_ui = 0
+let g:ycm_confirm_extra_conf=0
 let g:ycm_auto_trigger = 1
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = '>*'
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_min_num_of_chars_for_completion=2
 let g:ycm_complete_in_comments = 1
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'pandoc' : 1,
-      \ 'infolog' : 1,
-      \ 'mail' : 1,
-      \}
 
 "PowerLine
 set laststatus=2   " Always show the statusline
