@@ -3,13 +3,15 @@ syntax on
 filetype on
 set nocompatible
 set nu
+set ruler
+set cc=80
 set showmatch
 set cursorline
 "indent set
 set tabstop=2
-set expandtab
 set softtabstop=2
 set shiftwidth=2
+set expandtab
 set cindent
 set autoindent
 
